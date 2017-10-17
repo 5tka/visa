@@ -1,0 +1,118 @@
+.container {
+  @include container(1530);
+}
+
+.fl-l {
+  float: left;
+}
+
+.fl-r {
+  float: right;
+}
+
+.dn {
+  display: none !important;
+}
+
+.db {
+  display: block !important;
+}
+
+.tr300 {
+  @include transition(.25s);
+  transform: translateX(0) !important;
+}
+
+.main-title {
+  font-size: 60px;
+  font-weight: 900;
+  color: #303030;
+  line-height: 90px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #303030;
+  line-height: 54px;
+}
+
+.text {
+  font-size: 14px;
+  color: #707070;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.link {
+  font-size: 16px;
+  color: #5cb0a9;
+  line-height: 20px;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    @include transition(.25s);
+    content: '';
+    position: absolute;
+    width: 50%;
+    border-bottom: 1px solid #5cb0a9;
+    right: 0;
+    bottom: -1px;
+  }
+
+  &:before {
+    @include transition(.25s);
+    content: '';
+    position: absolute;
+    width: 50%;
+    border-bottom: 1px solid #5cb0a9;
+    left: 0;
+    bottom: -1px;
+  }
+
+  &:hover {
+    &:after,
+    &:before {
+      width: 0;
+    }
+  }
+}
+
+.btn {
+  @include transition(.25s);
+  text-align: center;
+  display: block;
+  color: #303030;
+  font-weight: 800;
+  padding: 0 10px;
+}
+
+.btn-ac {
+  background-color: #b2dfdb;
+  line-height: 65px;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: #a0dad5;
+    border: 1px solid #a0dad5;
+  }
+
+  &:focus {
+    background: #bce1de;
+    border: 1px solid #bce1de;
+  }
+}
+
+.btn-tr {
+  background-color: transparent;
+  line-height: 55px;
+  border: 1px solid #6d6d6d;
+
+  &:hover {
+    color: #fff;
+    background-color: #303030;
+    border: 1px solid transparent;
+  }
+}

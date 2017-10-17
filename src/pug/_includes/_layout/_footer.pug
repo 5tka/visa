@@ -1,0 +1,53 @@
+footer.footer
+  .container
+    .header__top-line.footer-top-line
+      .header__logo
+        a(href="#")
+          img(src="img/logo-f.png")
+      ul.header__nav-list.header__nav-list--static
+        each link in links
+          li.header__nav-item
+            a(href="#").header__nav-link= link
+      .callBack-field
+        a(href="tel:+38(067)9719797").header__nav-link +38 (067) 97 197 97
+        a(href="#").call-btn.btn.popup-btn(data-h4="Заповніть форму" data-p="та отримайте вигідну пропозицію вже зараз") Замовити дзвінок
+    .footer-social
+      ul.footer-social-list
+        li 
+          a(href="#") 
+            i.fa.fa-facebook(aria-hidden='true')
+        li
+          a(href="#")  
+            i.fa.fa-youtube-play(aria-hidden='true')
+    .footer-feedback-form
+      .about-form.footer-form
+        .about-f-dscr
+          h3.title Підпишіться на наші оновлення
+          p.text отримуйте новини, акції та вигідні пропозиції! 
+        form(action="/")
+          .form-input
+            label(for="email")
+              input(type="email").form-input__input
+              span.form-input__placeholder Эл. адрес
+          button(type="submit").btn.form-btn Дізнатися більше
+
+
+.popup-form-wrapper
+  .popup-close
+    img(src="img/close.png")
+  .popup-body
+    .footer-form
+      .popup-title
+        h4 
+        p.text 
+      .popup-form
+        form(action="/")
+          .form-input
+            label(for="email")
+              input(type="email").form-input__input
+              span.form-input__placeholder Ім'я
+          .form-input
+            label(for="email")
+              input(type="email").form-input__input.i-tell
+              span.form-input__placeholder Телефон
+          button(type="submit").btn.form-btn Відправити

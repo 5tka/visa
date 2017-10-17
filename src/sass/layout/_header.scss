@@ -1,0 +1,124 @@
+.j_burger {
+  display: none;
+}
+
+.header {
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  min-height: 950px;
+  padding-bottom: 20px;
+}
+
+.header__top-line {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 200px;
+
+  a {
+    display: block;
+  }
+
+  img {}
+}
+
+.header__nav-list {
+  max-width: 620px;
+  font-size: 0;
+}
+
+.header__nav-list--burger {
+  display: none;
+}
+
+.header__nav-item {
+  display: inline-block;
+  margin-right: 60px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header__nav-link {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: $black;
+  font-weight: 800;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    @include transition(.25s);
+    width: 0;
+    border-bottom: 2px solid $black;    
+    bottom: -2px;
+    left: 0;
+    margin: auto;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    @include transition(.25s);
+    width: 0;
+    border-bottom: 2px solid $black;    
+    bottom: -2px;
+    right: 0;
+    margin: auto;
+  }
+  &:hover{
+    &:after, &:before{
+      width: 50%;
+    }
+  }
+}
+
+.callBack-field {
+  max-width: 360px;
+
+  a {
+    display: inline-block;
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.call-btn {
+  @extend .btn-tr;
+  width: 180px;
+}
+
+.header__intro-wrapper {
+  max-width: 1270px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header__intro-body {
+  padding-top: 225px;
+  max-width: 750px;
+}
+
+.main-title {
+  margin-bottom: 20px;
+}
+
+.sub-main-title {
+  margin-bottom: 49px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.intro-btn {
+  @extend .btn-tr;
+  width: 260px;
+}

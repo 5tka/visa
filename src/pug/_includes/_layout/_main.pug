@@ -1,0 +1,169 @@
+main.main
+  section.services
+    .container
+      h2.title.services-title.
+        Для вас більше <br>10 видів послуг
+    .services-list
+      +services-item('img/serv/s' + 1 + '.jpg', 'Робочі візи')
+      +services-item('img/serv/s' + 2 + '.jpg', 'Туристичні візи')
+      +services-item('img/serv/s' + 3 + '.jpg', 'Візи для бізнесу')
+      +services-item('img/serv/s' + 4 + '.jpg', 'Візи для студентів')
+      +services-item('img/serv/s' + 5 + '.jpg', 'Гостьові візи')
+      +services-item('img/serv/s' + 6 + '.jpg', 'Візи для нареченої та нареченого')
+      +services-item('img/serv/s' + 7 + '.jpg', 'Візи для релігійних працівників')
+      +services-item('img/serv/s' + 8 + '.jpg', 'Візи для журналістів')
+      +services-item('img/serv/s' + 9 + '.jpg', 'Транзитні візи')
+      +services-item('img/serv/s' + 10 + '.jpg', 'Візи для інвесторів')
+    .container
+      .consult-info
+        p.text Отримуйте безкоштовну консультацію, щоб дізнатися більше про кожну послугу
+        a(href="#").btn.consult-btn.popup-btn(data-h4="Заповніть форму" data-p="та отримайте безкоштовну консультацію вже зараз") Замовити консультацію
+  section.about
+    .container
+      .about-wrapper
+        h2.title.about-title.
+          Чому з нами варто <br> працювати?
+        .about-body
+          .about-left
+            ul.a-list
+              li.a-item Надаємо візи терміном до 10 років
+              li.a-item Працюємо без затримок и зволікань навіть зі складними випадками
+              li.a-item Зв'язуємо з адвокатами з США для внесення змін у візи
+              li.a-item Надаємо можливість отримати візу в США у Литві з гарантією 100%
+              li.a-item Маємо контакти с українською діаспорою в США
+              li.a-item Допомагаємо з пошуком житла та роботи
+              li.a-item Надаємо дані про всі еміграційні програми 
+              li.a-item Не вимагаємо додаткових платежів
+          .about-right
+            .about-form
+              .about-f-dscr
+                h3.title Підпишіться на наші оновлення
+                p.text Дізнайтеся про додаткові переваги та отримуйте список вакансій США, які оплачуютсься найбільше!
+              form(action="/")
+                .form-input
+                  label(for="email")
+                    input(type="email").form-input__input
+                    span.form-input__placeholder Эл. адрес
+                button(type="submit").btn.form-btn Дізнатися більше
+  section.statistic
+    .container
+      h2.title.services-title Наші досягнення та стандарти роботи
+      .statistic-wrapper
+        .stat-body
+          .stat-items
+            .stat-item
+              span 5
+              p років досвіду
+            .stat-item
+              p відкрито більше
+              span 520
+              p віз 
+            .stat-item
+              span 95%
+              p ймовірність видачі
+          .stat-dscr
+            p.text Наші клієнти — це приватні особи і люди бізнесу, топ-менеджмент компаній і сімейні пари з дітьми, завзяті мандрівники й ті, хто шукає кращого життя й престижну роботу. Ми забезпечуємо індивідуальний підхід до кожного, надаємо об'єктивну і правдиву інформацію щодо шансів отримати візу та деталей міграційних, туристичних, студентських та інших програм. 
+        .stat-signin
+          h3.title Запишіться зараз на консультацію до візового спеціаліста
+          a(href="#").btn.form-btn.popup-btn(data-h4="Заповніть форму" data-p="та отримайте безкоштовну консультацію вже зараз") Записатись
+  section.feedbacks
+    .container
+      h2.title.feedbacks-title Відгуки наших клієнтів
+      p.text.feedback-sub-title 130 відгуків та подячних листів за останній рік
+      .feedback-body
+        .feedbacks-slider-wrapper
+          .feedbacks-slider
+            .feedback-slide
+              .f-img
+                img(src="img/p-slider/p1.png")
+              .f-dscr
+                span Говоши Янош 1
+                p.text Уже как полгода работаю ui-дизайнером в крупнейшем агентстве в Нью-Йорке. Спасибо, визатур, без вас этого всего не было бы!
+            .feedback-slide
+              .f-img
+                img(src="img/p-slider/p1.png")
+              .f-dscr
+                span Говоши Янош 2
+                p.text Уже как полгода работаю ui-дизайнером в крупнейшем агентстве в Нью-Йорке. Спасибо, визатур, без вас этого всего не было бы!
+            .feedback-slide
+              .f-img
+                img(src="img/p-slider/p1.png")
+              .f-dscr
+                span Говоши Янош 3
+                p.text Уже как полгода работаю ui-дизайнером в крупнейшем агентстве в Нью-Йорке. Спасибо, визатур, без вас этого всего не было бы!
+        .videos-slider-wrapper
+          .videos-slider
+            each item in [1,2,3,4,5,6]
+              .video-slide
+                .v-o
+                  img(src="img/videos/play.svg")
+                .v-v
+                  img(src="img/videos/v1.jpg")
+  section.blog
+    .container
+      .company-body
+        .company-news
+          .company-title
+            h2.title.blog-title Новини компанії
+            a(href="#").link Читати всі новини
+          .company-items
+            .compnay-item
+              .c-img
+                img(src="img/blog/b1.jpg")
+              .c-dscr
+                span Акція до Нового року!
+                .c-text
+                  p.text Зверніться за формленням візи до 23 грудня, та отримайте подарунок від VISA TOUR!
+              a(href="#").link Детальніше
+            .compnay-item
+              .c-img
+                img(src="img/blog/b2.jpg")
+              .c-dscr
+                span Кількість відмов зростає?
+                .c-text
+                  p.text Чому тенденція до відмов українцям зростає, і хто знаходиться в зоні ризику?
+              a(href="#").link Детальніше
+        .company-atricals
+          .company-title
+            h2.title.blog-title Корисні статті
+            a(href="#").link Всі статті
+          .company-items
+            .compnay-item
+              .c-img
+                img(src="img/blog/b3.jpg")
+              .c-dscr
+                span Найпопулярніші програми для студентів в США
+                .c-text
+                  p.text Сучасний світ - це безліч можливостей для талановитої, кретивної та амбіційної молоді.
+              a(href="#").link Читати далі
+            .compnay-item
+              .c-img
+                img(src="img/blog/b4.jpg")
+              .c-dscr
+                span Визначні місця Н'ю-Йорку: побачити все
+                .c-text
+                  p.text Куди податися у Великому Яблуці в першу чергу? Де на вас чекають круті розваги і смачна їжа?
+              a(href="#").link Читати далі
+  section.contacts 
+    .contacts-left
+      .map-wrapper
+        #map_canvas
+    .contacts-right
+      .addr-body
+        .contacts-title
+          h2.title.blog-title  Контакти
+          span.feedback-sub-title Завітайте до нашого офісу для особистої консультації
+        .contacts-addr
+          span Адреси:
+          p.text Львів, вул. Під Дубом, 10
+          p.text Львів, вул. Джерельна, 38, офіс 202
+        .contacts-addr
+          span Телефони:
+          p.text
+            a(href="tel:+380639719797") +38 (063) 97 197 97
+          p.text
+            a(href="tel:+380639719797") +38 (067) 97 197 97
+        .contacts-addr
+          span E-mail:
+          p.text
+            a(href="mailto: visatourzayavka@gmail.com") visatourzayavka@gmail.com

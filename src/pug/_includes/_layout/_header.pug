@@ -1,0 +1,29 @@
+- var links = ['Послуги', 'О компанії', 'Відгуки', 'Блог', 'Контакти']
+
+header.header
+  .container
+    .header__top-line
+      .header__logo
+        a(href="#")
+          img(src="img/logo.png")
+      ul.header__nav-list.header__nav-list--static
+        each link in links
+          li.header__nav-item
+            a(href="#").header__nav-link= link
+      ul.header__nav-list.header__nav-list--burger
+        button.hamburger.hamburger--arrowturn-r.j_burger(type='button')
+          span.hamburger-box
+            span.hamburger-inner
+        each link in links
+          li.header__nav-item
+            a(href="#").header__nav-link= link
+      .callBack-field
+        a(href="tel:+38(067)9719797").header__nav-link +38 (067) 97 197 97
+        a(href="#").call-btn.btn.popup-btn(data-h4="Відправте номер" data-p="Ми одразу з Вами зв'яжемося") Замовити дзвінок
+    .header__intro-wrapper
+      .header__intro-body
+        h1.main-title.
+          Візи в США для туризму та бізнесу
+        p.sub-main-title.
+          10 видів віз терміном на 10 років з гарантією видачі 95%.<br> Заповніть форму, щоб отримати персональну пропозицію
+        a(href="#").intro-btn.btn.popup-btn(data-h4="Заповніть форму" data-p="та отримайте вигідну пропозицію вже зараз") Заповнити
